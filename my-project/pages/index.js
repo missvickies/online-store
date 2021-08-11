@@ -39,7 +39,7 @@ export default function Home() {
     <div className="h-screen overflow-hidden">
       <NavBar></NavBar>
       <div className="flex flex-row justify-evenly h-screen overflow-hidden">
-        <div className="bg-pink-100 h-100 overflow-scroll">
+        <div className=" h-100 overflow-scroll">
           {blogPosts.map((post) => (
             <Post
               key={post.id}
@@ -51,12 +51,14 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="bg-pink-100">
-          <Carousel />
-        </div>
-        <div className="bg-pink-100">
-          <h1 className="m-20"> Summer Apparel</h1>
+        <Carousel />
+
+        <div className=" mt-20">
+          <p> New Collection</p>
+          <h1 className=""> Summer Apparel</h1>
+          <div className=" border-b-4 w-16"></div>
           <br></br>
+          <h2>Quality that never goes out of style</h2>
           <Post
             id={blogPosts[3].id}
             title={blogPosts[3].title}
