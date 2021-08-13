@@ -2,16 +2,12 @@ import Link from "next/link";
 import { MenuIcon } from "@heroicons/react/solid";
 const navLinks = [
   {
-    label: "Shop",
-    path: "/shop",
+    label: "New",
+    path: "/new",
   },
   {
     label: "Products",
     path: "/products",
-  },
-  {
-    label: "New",
-    path: "/new",
   },
   {
     label: "About us",
