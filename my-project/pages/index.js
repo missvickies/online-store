@@ -36,37 +36,39 @@ const blogPosts = [
 
 export default function Home() {
   return (
-    <div className="h-screen overflow-hidden">
+    <>
       <NavBar></NavBar>
-      <div className="flex flex-row justify-evenly h-screen overflow-hidden">
-        <div className=" h-100 overflow-scroll">
-          {blogPosts.map((post) => (
+      <div className=" h-screen w-screen overflow-hidden">
+        <div className="flex flex-row justify-evenly h-screen overflow-hidden">
+          <div className=" h-100 overflow-scroll">
+            {blogPosts.map((post) => (
+              <Post
+                key={post.id}
+                id={post.id}
+                title={post.title}
+                summary={post.summary}
+                img={post.img}
+              />
+            ))}
+          </div>
+
+          <Carousel />
+
+          <div className=" mt-20">
+            <p> New Collection</p>
+            <h1 className=""> Summer Apparel</h1>
+            <div className=" border-b-4 w-16"></div>
+            <br></br>
+            <h2>Quality that never goes out of style</h2>
             <Post
-              key={post.id}
-              id={post.id}
-              title={post.title}
-              summary={post.summary}
-              img={post.img}
+              id={blogPosts[3].id}
+              title={blogPosts[3].title}
+              summary={blogPosts[3].summary}
+              img={blogPosts[3].img}
             />
-          ))}
-        </div>
-
-        <Carousel />
-
-        <div className=" mt-20">
-          <p> New Collection</p>
-          <h1 className=""> Summer Apparel</h1>
-          <div className=" border-b-4 w-16"></div>
-          <br></br>
-          <h2>Quality that never goes out of style</h2>
-          <Post
-            id={blogPosts[3].id}
-            title={blogPosts[3].title}
-            summary={blogPosts[3].summary}
-            img={blogPosts[3].img}
-          />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -17,7 +17,7 @@ const navLinks = [
 
 export const NavBar = () => {
   return (
-    <div className="navBar h-12 flex flex-row justify-between m-8 items-center">
+    <div className=" sticky top-0 z-50 w-full h-12 bg-blue-100 flex flex-row justify-between m-8 items-center">
       <div className="flex justify-start">
         <Link href="/">
           <a> LOUIS</a>
