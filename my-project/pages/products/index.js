@@ -20,7 +20,7 @@ export default class products extends React.Component {
         method: "GET",
         headers: {
           "x-rapidapi-key":
-            "d42578c075mshd085efad4aa21e3p12c67ajsn0c24c0da9233",
+           
           "x-rapidapi-host": "asos2.p.rapidapi.com",
         },
       }
